@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lanolin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lanolin
+  template:
+    metadata:
+      labels:
+        app: lanolin
+    spec:
+      containers:
+      - name: lanolin
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lanolin
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: lanolin
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arnica
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arnica
+  template:
+    metadata:
+      labels:
+        app: arnica
+    spec:
+      containers:
+      - name: arnica
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: arnica
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: arnica

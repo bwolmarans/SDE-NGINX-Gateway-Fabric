@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: footwear
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coats
+  namespace: footwear
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coats
+  template:
+    metadata:
+      labels:
+        app: coats
+    spec:
+      containers:
+      - name: coats
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coats
+  namespace: footwear
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: coats

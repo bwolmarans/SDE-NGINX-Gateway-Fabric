@@ -1,0 +1,31 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: coffee-mobile-httproute
+spec:
+  parentRefs:
+  - name: cafe-gateway
+    sectionName: http
+  hostnames:
+  - "coffee.lab.f5npi.net"
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /menu
+    filters:
+    - type: RequestHeaderModifier
+      requestHeaderModifier:
+        set:
+        - name: User-Agent
+          value: Mozilla/5.0 (iPhone; CPU iPhone OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1
+        add:
+        - name: Accept-Encoding
+          value: compress
+        - name: Mobile-coffee-test
+          value: qa-udf-lab
+        remove:
+        - Accept-Language
+    backendRefs:
+    - name: coffee
+      port: 80

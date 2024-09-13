@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kombucha
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kombucha
+  template:
+    metadata:
+      labels:
+        app: kombucha
+    spec:
+      containers:
+      - name: kombucha
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kombucha
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: kombucha
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kefir
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kefir
+  template:
+    metadata:
+      labels:
+        app: kefir
+    spec:
+      containers:
+      - name: kefir
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kefir
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: kefir

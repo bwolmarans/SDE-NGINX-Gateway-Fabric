@@ -1,0 +1,98 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redrose
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redrose
+  template:
+    metadata:
+      labels:
+        app: redrose
+    spec:
+      containers:
+      - name: redrose
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redrose
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: redrose
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tetley
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tetley
+  template:
+    metadata:
+      labels:
+        app: tetley
+    spec:
+      containers:
+      - name: tetley
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tetley
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: tetley
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yorkshire
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yorkshire
+  template:
+    metadata:
+      labels:
+        app: yorkshire
+    spec:
+      containers:
+      - name: yorkshire
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: yorkshire
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: yorkshire

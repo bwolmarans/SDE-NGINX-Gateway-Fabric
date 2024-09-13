@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coffee
+  template:
+    metadata:
+      labels:
+        app: coffee
+    spec:
+      containers:
+      - name: coffee-mobile
+        image: nginx
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/nginx
+          readOnly: true
+      volumes:
+      - name: config-volume
+        configMap:
+          name: coffee-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coffee-config
+data:
+  nginx.conf: |-
+    user  nginx;
+    worker_processes  1;
+
+    pid        /var/run/nginx.pid;
+
+    load_module /usr/lib/nginx/modules/ngx_http_js_module.so;
+
+    events {}
+
+    http {
+        default_type text/plain;
+
+        js_import /etc/nginx/headers.js;
+        js_set \$headers headers.getRequestHeaders;
+
+        server {
+            listen 8080;
+            return 200 "\$headers";
+        }
+    }
+  headers.js: |-
+    function getRequestHeaders(r) {
+        let s = "Headers:\n";
+        for (let h in r.headersIn) {
+        s += \`  header '\${h}' is '\${r.headersIn[h]}'\n\`;
+        }
+        return s;
+    }
+    export default {getRequestHeaders};
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffee
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: coffee

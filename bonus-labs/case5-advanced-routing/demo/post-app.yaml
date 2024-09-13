@@ -1,0 +1,109 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: post-config
+data:
+  default.conf: |
+    server {
+      listen 8080;
+      return 200 'Hello from the POST server!\r\n';
+      add_header Content-Type text/plain;
+    }
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: get-config
+data:
+  default.conf: |
+    server {
+      listen 8080;
+      return 200 'Hello from the GET server!\r\n';
+      add_header Content-Type text/plain;
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: post
+  template:
+    metadata:
+      labels:
+        app: post
+    spec:
+      volumes:
+        - name: post-config-volume
+          configMap:
+            name: post-config
+            items:
+            - key: default.conf
+              path: default.conf
+      containers:
+      - name: nginx
+        image: nginxinc/nginx-unprivileged:latest
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: post-config-volume
+          mountPath: /etc/nginx/conf.d
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: get
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: get
+  template:
+    metadata:
+      labels:
+        app: get
+    spec:
+      volumes:
+        - name: get-config-volume
+          configMap:
+            name: get-config
+            items:
+            - key: default.conf
+              path: default.conf
+      containers:
+      - name: nginx
+        image: nginxinc/nginx-unprivileged:latest
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: get-config-volume
+          mountPath: /etc/nginx/conf.d
+---      
+apiVersion: v1
+kind: Service
+metadata:
+  name: post
+spec:
+  selector:
+    app: post
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: get
+spec:
+  selector:
+    app: get
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      name: http

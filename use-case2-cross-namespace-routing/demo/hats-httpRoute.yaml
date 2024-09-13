@@ -1,0 +1,17 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: retail-httproute
+spec:
+  parentRefs:
+  - name: retail-gateway
+    sectionName: http
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /hats
+    backendRefs:
+    - name: hats
+      namespace: retail
+      port: 80

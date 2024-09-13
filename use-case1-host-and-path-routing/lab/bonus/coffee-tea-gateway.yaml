@@ -1,0 +1,15 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: cafe-gateway
+spec:
+  gatewayClassName: nginx
+  listeners:
+  - name: http-tea
+    port: 80
+    protocol: HTTP
+    hostname: tea.lab.f5npi.net
+  - name: http-coffee
+    port: 80
+    protocol: HTTP
+    hostname: coffee.lab.f5npi.net

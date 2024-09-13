@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: retail
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hats
+  namespace: retail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hats
+  template:
+    metadata:
+      labels:
+        app: hats
+    spec:
+      containers:
+      - name: hats
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hats
+  namespace: retail
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: hats

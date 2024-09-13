@@ -1,0 +1,131 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-v1-get
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coffee-v1-get
+  template:
+    metadata:
+      labels:
+        app: coffee-v1-get
+    spec:
+      containers:
+      - name: coffee-v1-get
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffee-v1-get-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: coffee-v1-get
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-v1-post
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coffee-v1-post
+  template:
+    metadata:
+      labels:
+        app: coffee-v1-post
+    spec:
+      containers:
+      - name: coffee-v1-post
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffee-v1-post-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: coffee-v1-post
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-v2-get
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coffee-v2-get
+  template:
+    metadata:
+      labels:
+        app: coffee-v2-get
+    spec:
+      containers:
+      - name: coffee-v2-get
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffee-v2-get-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: coffee-v2-get
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-v2-post
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coffee-v2-post
+  template:
+    metadata:
+      labels:
+        app: coffee-v2-post
+    spec:
+      containers:
+      - name: coffee-v2-post
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: coffee-v2-post-svc
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: coffee-v2-post

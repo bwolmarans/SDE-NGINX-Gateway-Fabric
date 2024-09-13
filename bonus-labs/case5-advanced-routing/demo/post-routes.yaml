@@ -1,0 +1,27 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: post-n-get
+spec:
+  parentRefs:
+  - name: post-n-get
+    sectionName: http
+  hostnames:
+  - coffee.lab.f5npi.net
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+      method: "POST"
+    backendRefs:
+    - name: post
+      port: 80
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+      method: "GET"
+    backendRefs:
+    - name: get
+      port: 80

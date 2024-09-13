@@ -1,0 +1,98 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: folgers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: folgers
+  template:
+    metadata:
+      labels:
+        app: folgers
+    spec:
+      containers:
+      - name: folgers
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: folgers
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: folgers
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: starbucks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: starbucks
+  template:
+    metadata:
+      labels:
+        app: starbucks
+    spec:
+      containers:
+      - name: starbucks
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: starbucks
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: starbucks
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: peets
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: peets
+  template:
+    metadata:
+      labels:
+        app: peets
+    spec:
+      containers:
+      - name: peets
+        image: nginxdemos/nginx-hello:plain-text
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: peets
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: peets
