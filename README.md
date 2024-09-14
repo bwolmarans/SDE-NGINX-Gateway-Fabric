@@ -1,5 +1,8 @@
 # NGINX Gateway Fabric (NGF)
 
+This lab is originally created by the F5 NPI Team thanks to a.glanville@f5.com and john.wong@f5.com
+The main copy of this lab is stored on F5 private Gitlab behind the F5 VPN and linked to from the UDF description. 
+
 Welcome to this NGINX Gateway Fabric (NGF) project where we explore and demonstrate different use
 cases. We will be providing labs based on published use cases supported by the NGINX Gateway
 Fabric **stable** release.
