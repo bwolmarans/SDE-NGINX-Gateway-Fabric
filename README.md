@@ -1,6 +1,6 @@
 # NGINX Gateway Fabric (NGF)
 
-This lab is originally created by the F5 NPI Team thanks to a.glanville@f5.com and john.wong@f5.com
+This lab is authored by the F5 NPI Team a.glanville@f5.com and t.thomas@f5.com and john.wong@f5.com
 The main copy of this lab is stored on F5 private Gitlab behind the F5 VPN and is linked to from the UDF description. This repo is for training where access to the F5 VPN may be difficult. 
 
 Welcome to this NGINX Gateway Fabric (NGF) project where we explore and demonstrate different use
@@ -24,7 +24,7 @@ In these sessions, we are breaking them into into the following sections:
 ### Environment
 
 The live environment you will be using will be based on the
-[SDE NGINX Gateway Fabric UDF Blueprint](http://go/sde-ngf-udf). Go head and start this deployment
+[SDE NGINX Gateway Fabric UDF Blueprint](https://udf.f5.com/b/d2617e7e-018f-4c9a-a15f-09ca55ae8a37#documentation). Create and start a deployment
 if you have not already done so.
 
 >**Note**: Starting the lab can take approximately 10 minutes
