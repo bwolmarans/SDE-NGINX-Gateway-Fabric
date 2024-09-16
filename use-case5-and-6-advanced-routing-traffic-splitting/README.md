@@ -4,7 +4,7 @@ This repository includes the labs and guides to support the SDE up-skilling sess
 
 ## Prerequisites
 
-* An [SDE NGINX Gateway Fabric UDF Blueprint](http://go/sde-ngf-udf) deployment
+* An [SDE NGINX Gateway Fabric UDF Blueprint](https://udf.f5.com/b/d2617e7e-018f-4c9a-a15f-09ca55ae8a37) deployment
 
 ## Overview
 

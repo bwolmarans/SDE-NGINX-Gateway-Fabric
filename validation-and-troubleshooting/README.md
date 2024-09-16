@@ -4,7 +4,7 @@ This is a collection of validation steps along with troubleshooting tips that ca
 
 ## Prerequisites
 
-* A running instance of the [SDE NGINX Gateway Fabric UDF Blueprint](http://go/sde-ngf-udf) deployment.
+* A running instance of the [SDE NGINX Gateway Fabric UDF Blueprint](https://udf.f5.com/b/d2617e7e-018f-4c9a-a15f-09ca55ae8a37) deployment.
 
 ### shell updates to improve your Kubernetes interactions
 
