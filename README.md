@@ -11,7 +11,7 @@ Features only found in the **edge** release are **not**  included in this conten
 
 The NGINX Gateway Fabric leverages the NGINX web server as a proxy for traffic into a Kubernetes cluster.  The NGINX Gateway Fabric includes a standard Kubernetes controller **container** that consumes yaml and produces an NGINX.conf file that is pushed to the NGINX Gateway Fabric NGINX web server **container**.
 
-![NGINX Gateway Fabric](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/blob/main/uc-1-basic-routing-NGF-process-overview.drawio.png)
+![NGINX Gateway Fabric](https://github.com/bwolmarans/main/blob/main/uc-1-basic-routing-NGF-process-overview.drawio.png)
 
 ## Up-skill session layout
 
@@ -41,9 +41,9 @@ Each use case will have all the source files provided.
 
 ### How to validate an existing NGINX Gateway Fabric environment
 
-We will discuss some basic validation options in the lecture.  We will consider the Kubernetes environment, the base NGINX Gateway Fabric install and objects used in many of the demos and labs.  Review the [Validation and Troubleshooting document](../SDE-NGINX-Gateway-Fabric/validation-and-troubleshooting/README.md) to see these command examples along with some additional tips.
+We will discuss some basic validation options in the lecture.  We will consider the Kubernetes environment, the base NGINX Gateway Fabric install and objects used in many of the demos and labs.  Review the [Validation and Troubleshooting document](../main/validation-and-troubleshooting/README.md) to see these command examples along with some additional tips.
 
-* [Validation and Troubleshooting document](../SDE-NGINX-Gateway-Fabric/validation-and-troubleshooting/README.md)
+* [Validation and Troubleshooting document](../main/validation-and-troubleshooting/README.md)
 
 ### Demo
 
@@ -73,8 +73,8 @@ then using their validation and troubleshooting knowledge solve the mystery.
 
 These first two use cases were merged into one use case.  However, you may find some unique content here that is of interest.
 
-* [Advanced Routing](../SDE-NGINX-Gateway-Fabric/bonus-labs/case5-advanced-routing/README.md)
-* [Traffic Splitting](../SDE-NGINX-Gateway-Fabric/bonus-labs/case6-split-traffic-connections/README.md)
+* [Advanced Routing](../main/bonus-labs/case5-advanced-routing/README.md)
+* [Traffic Splitting](../main/bonus-labs/case6-split-traffic-connections/README.md)
 
 This bonus lab provides an example of how to use one Gateway with two namespaces and one HTTPRoute.
 
