@@ -11,7 +11,7 @@ Features only found in the **edge** release are **not**  included in this conten
 
 The NGINX Gateway Fabric leverages the NGINX web server as a proxy for traffic into a Kubernetes cluster.  The NGINX Gateway Fabric includes a standard Kubernetes controller **container** that consumes yaml and produces an NGINX.conf file that is pushed to the NGINX Gateway Fabric NGINX web server **container**.
 
-![NGINX Gateway Fabric](https://github.com/bwolmarans/main/blob/main/uc-1-basic-routing-NGF-process-overview.drawio.png)
+![NGINX Gateway Fabric](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/blob/main/uc-1-basic-routing-NGF-process-overview.drawio.png)
 
 ## Up-skill session layout
 
