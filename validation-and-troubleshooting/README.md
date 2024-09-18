@@ -55,8 +55,11 @@ kubectl describe nodes w1-mgmt.lab.f5npi.net
 
 Next check for any pod that is explicitly not in the the running state.
 
-```
+```bash
 kubectl get pods --all-namespaces
+```
+
+```bash
 kubectl get pods --all-namespaces --field-selector=status.phase!=Running
 ```
 
@@ -72,8 +75,17 @@ Alternatively you can also check the logs for most to the kubernetes core servic
 
 ```bash
 kubectl -n kube-system logs pods/kube-apiserver-ctlr-mgmt.lab.f5npi.net
+```
+
+```bash
 kubectl -n kube-system logs pods/kube-scheduler-ctlr-mgmt.lab.f5npi.net
+```
+
+```bash
 kubectl -n kube-system logs pods/kube-controller-manager-ctlr-mgmt.lab.f5npi.net
+```
+
+```bash
 kubectl -n kube-system logs pods/kube-proxy-[TAB][TAB]
 ```
 
@@ -99,6 +111,8 @@ Next you might want to review the logs for both of the nginx-gateway fabric cont
 
 ```bash
 kubectl -n nginx-gateway logs pods/nginx-gateway-[TAB][TAB] nginx-gateway
+```
+```bash
 kubectl -n nginx-gateway logs pods/nginx-gateway-[TAB][TAB] nginx
 ```
 
@@ -110,7 +124,11 @@ Check for all available Gateway Classes.  We want to confirm that the NGINX Gate
 
 ```bash
 kubectl get gatewayclasses
+```
+```bash
 kubectl get gatewayclasses nginx -o yaml
+```
+```bash
 kubectl describe gatewayclasses nginx
 ```
 
@@ -126,6 +144,8 @@ Just as before we can get more details about our Gateway using `-o yaml` and the
 
 ```bash
 kubectl get gateways cafe-gateway -o yaml
+```
+```bash
 kubectl describe gateway cafe-gateway
 ```
 
@@ -137,6 +157,8 @@ First we can check for any HTTPRoute in the default namespace and then in any na
 
 ```bash
 kubectl get httproutes
+```
+```bash
 kubectl get httproutes --all-namespaces
 ```
 
@@ -146,6 +168,8 @@ We can dig a little further and look for the HTTPRoute rules, backend references
 
 ```bash
 kubectl get httproutes coffee-httproute  -o yaml
+```
+```bash
 kubectl describe httproutes coffee-httproute
 ```
 
@@ -163,6 +187,8 @@ You can verify these using `kubectl get` and the `-o yaml` option.  For example 
 
 ```bash
 kubectl get gatewayclasses nginx -o yaml
+```
+```bash
 kubectl get gateways cafe-gateway -o yaml
 ```
 
@@ -170,6 +196,8 @@ The HTTPRoute object should refer to the Gateway object and the listener section
 
 ```bash
 kubectl get gateways cafe-gateway -o yaml
+```
+```bash
 kubectl get httproutes coffee-httproute -o yaml
 ```
 
