@@ -195,9 +195,9 @@ kubectl describe gateways cafe-gateway
 
 Next we will create the **HTTPRoute** that will allow traffic inbound to our coffee application and leverage the NGINX Gateway Fabric gateway object.  This object will also define the path uri of **/tea** and backend service (POD) to route traffic to.  This could be the responsibility of the **Application Developer**.
 
-However, to make this lab just slightly challenging the following code snippet will create a file called **tea-httpRoute.yaml** but it will not work until you update the values surrounded in **##** symbols.
 
 >**Note**: This code snippet will create a file that you must update and then deploy with `kubectl create -f tea-httpRoute.yaml`.
+>**Note**: To make this lab just slightly challenging the following code snippet will create a file called **tea-httpRoute.yaml** but it will not work until you update the values surrounded in **##** symbols.  Refer back to how we created the **coffee* route in the demo for reference. 
 
 ```bash
 echo "apiVersion: gateway.networking.k8s.io/v1
@@ -227,8 +227,10 @@ kubectl create -f tea-httpRoute.yaml
 Now you can check on the status of your new tea httpRoute rule.
 
 ```bash
-kubectl describe httproutes tea
 kubectl get httproutes tea
+```
+```bash
+kubectl describe httproutes tea
 ```
 
 <details>
@@ -306,14 +308,14 @@ kubectl get httproutes tea
 Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRoute** we just deployed and that is linked the **cafe-gateway** object.
 
 ```bash
-curl tea.lab.f5npi.net/tea
+curl cafe.lab.f5npi.net/tea
 ```
 
 <details>
   <summary><b>Example output</b></summary>
 
   ```bash
-  f5admin@bastion:~$ curl tea.lab.f5npi.net/tea
+  f5admin@bastion:~$ curl cafe.lab.f5npi.net/tea
   Server address: 10.244.67.147:8080
   Server name: tea-9d8868bb4-fqqkd
   Date: 11/Jul/2024:06:45:07 +0000
