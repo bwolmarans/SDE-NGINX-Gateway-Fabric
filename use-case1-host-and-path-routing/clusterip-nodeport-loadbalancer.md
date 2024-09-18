@@ -134,7 +134,10 @@ myweb   ClusterIP   10.101.177.48   <none>        80/TCP    12s   app=myweb
 ```
 
 </details>
-So is a ClusterIP accessible from outside the Cluster? Try to curl to your Cluster IP from the Bastion Host. **Note** this is expected to fail.
+
+So is a ClusterIP accessible from outside the Cluster? Try to curl to your Cluster IP from the Bastion Host. 
+
+>**Note** this is expected to fail.
 
 >**Note**: Your POD IP address will most likely be different than what is shown in the following example.
 
@@ -142,6 +145,7 @@ So is a ClusterIP accessible from outside the Cluster? Try to curl to your Clust
 curl -m 3 10.244.67.143
 ```
 Now again if we want to test our new ClusterIP service we have to do this from within the cluster so we will sign in to the ctlr-mgmt node again and test our service.
+So what is the advantage of a ClusterIP over a Pod IP? The advantage is the ClusterIP will still work if the pods change.
 
 ```bash
 ssh ctlr-mgmt.lab.f5npi.net
