@@ -1,3 +1,11 @@
+# The Cluster
+
+Take a quick look at the IP Addresses for your Nodes in your Cluster:
+
+```bash
+kubectl get nodes -owide
+```
+
 # Basic Kubernetes Deployment
 
 First we create a basic nginx deployment.
@@ -34,6 +42,17 @@ Try to curl to your POD IP from the Bastion Host. **Note** this is expected to f
 curl -m 3 10.244.67.143
 ```
 Why did this fail? Because this ip is not exposed outside the cluster.
+
+Try to curl to one of your Node IP's from the Bastion Host. **Note** this is expected to fail.
+
+
+```bash
+kubectl get nodes -owide
+```
+
+Why did this fail? Because this is just the IP Address of the Node, and there is no NodePort service for this deployment.
+
+
 So how can you test this basic NGINX web server? You have to go into the cluster, and generate a request from one of the nodes in the cluster.  This pod has no service defined and as such is only available from within the Kubernetes cluster using the POD IP Address.
 
 ```bash
@@ -254,7 +273,12 @@ You can now test out this feature using one of the nodes public IP address on th
 
 ```bash
 kubectl get nodes -owide
-curl 10.1.10.4:31
+```
+
+**Note** There can be many servcies on a node listening on port 80. So instead of port 80, use the unique port for your service, 31780 in the example here.
+
+```bash
+curl 10.1.10.4:31:31780
 ```
 
 <details>
