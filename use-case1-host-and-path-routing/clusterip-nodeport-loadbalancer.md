@@ -24,7 +24,7 @@ myweb-68fc94d654-mc5tz   1/1     Running   0          10s   10.244.67.143   w1-m
 
 </details>
 
-Try to curl to your POD IP from the Bastion Host. Note that this is expected to fail.
+Try to curl to your POD IP from the Bastion Host. ***Note** this is expected to fail.
 
 >**Note**: Your POD IP address will most likely be different than what is shown in the following example.
 
@@ -36,6 +36,8 @@ So how can you test this basic NGINX web server? You have to go into the cluster
 
 ```bash
 ssh ctlr-mgmt.lab.f5npi.net
+```
+```bash
 curl 10.244.67.143
 ```
 
