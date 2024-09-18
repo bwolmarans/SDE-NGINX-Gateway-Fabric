@@ -81,7 +81,7 @@ namespace based on the following criteria.
 
 This could be the responsibility of the **cluster administrator**.
 
-Copy and paste the following code snippet to deploy the coffee gateway.
+Copy and paste the following code snippet to deploy the tea gateway.
 
 > If you want to see the yaml file for this gateway, click [here](gateway.yaml).
 
