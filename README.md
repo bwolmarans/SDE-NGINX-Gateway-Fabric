@@ -13,14 +13,6 @@ The NGINX Gateway Fabric leverages the NGINX web server as a proxy for traffic i
 
 ![NGINX Gateway Fabric](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/blob/main/uc-1-basic-routing-NGF-process-overview.drawio.png)
 
-## Up-skill session layout
-
-In these sessions, we are breaking them into into the following sections:
-
-* Demo: We will demonstrate the configuration and validation steps.
-* Interactive Lab: You are expected configure and validate a use case.
-* Fix It: We will provide a broken configuration and you are expected to fix the configuration issue.
-
 ### Environment
 
 The live environment you will be using will be based on the
@@ -41,18 +33,9 @@ article describes configuration steps to allow that.
 
 Each use case will consist of a Demo, Lab, and Fix it.
 
-### Demo
-
-The instructor will drive.
-
-### Interactive lab
-
-Next, participants join break out groups and be expected to complete the **Interactive Lab**.
-
-### Fix it
-
-The last exercise of the upskilling session asks the participants to deploy a broken solution and
-then using their validation and troubleshooting knowledge solve the mystery.
+* Demo: Instructor will drive.
+* Interactive Lab: You are expected configure and validate a use case.
+* Fix It: You are given a broken configuration and you are expected to fix the issue.
 
 ### List of Use Cases
 
