@@ -1,7 +1,10 @@
-# Basic of Kubernetes Networking
+# Basic of Kubernetes Deployments, Services, and Networking
 
 We will now refresh ourselves on some Kubernetes basic networking, using a deployment as an example.
-DNS is outside the scope of this.
+
+**Note** DNS is needed in a production Kubernegtes cluster, but is outside the scope of this module.  This module will all be at Layers 3 and 4.
+
+
 
 
 # The Cluster
