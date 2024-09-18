@@ -13,8 +13,6 @@ their kubernetes applications using either hostname or uri path values.
 
 This lesson includes one demo, one interactive lab and one break fix lab.
 
-During the host and path routing unit of the up-skilling session there is a short demo highlighting [how **Pods** can be exposed using
-services](clusterip-nodeport-loadbalancer.md). This is a link to that PODS to Services demo.
 
 1. [Coffee Demo](demo/README.md): Configure basic routing to a *coffee* application.
 2. [Tea Lab](lab/README.md): You will configure basic routing to a *tea* application,
