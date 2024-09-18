@@ -380,12 +380,11 @@ curl coffee.lab.f5npi.net/tea
 <!-- markdownlint-enable MD007 -->
 </details>
 
+## Single Hostname, Different Routes
 
 Next, and to prove the relationship of hostnames in Gateways to HTTP Routes, update the Gateway and the Routes to use **cafe.npi.f5net.com**.
 You can delete and recreate, or use kubectl apply to modify.
 
-<details>
-  <summary><h4>Solution</h4></summary>
   ```bash
   kubectl apply -f - <<EOF
   apiVersion: gateway.networking.k8s.io/v1
@@ -441,7 +440,6 @@ You can delete and recreate, or use kubectl apply to modify.
         port: 80
   EOF
   ```
-</details>
 
 ## Test
 
