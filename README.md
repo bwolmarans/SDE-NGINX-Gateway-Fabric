@@ -44,7 +44,7 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 * Interactive Lab: You are expected configure and validate a use case.
 * Fix It: You are given a broken configuration and you are expected to fix the issue.
 
-### Complete these Lab/Moduels Use Cases, in order.
+### Complete these Lab Modules/Use Cases, in order.
 * Use Case 1: [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
 * Use Case 2: [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * Use Case 3: [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
