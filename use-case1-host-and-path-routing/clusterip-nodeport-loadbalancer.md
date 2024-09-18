@@ -4,7 +4,7 @@ First we create a basic nginx deployment.
 
 ![myweb deployment](images/myweb-deployment.png)
 
-The actual creation time should be less than a minute but if you the status of `ContainerCreating` you may need to wait a few more seconds for the process to complete.
+The actual creation time should be less than a minute, you may see `ContainerCreating` you may need to wait a few more seconds for the process to complete.
 
 ```bash
 kubectl create deployment myweb --image=nginx --port=80
