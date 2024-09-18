@@ -69,10 +69,27 @@ kubectl get pod,svc -owide
   service/coffee       ClusterIP   10.101.152.33   <none>        80/TCP    10s     app=coffee
   service/kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP   4d22h   <none>
   ```
-
 </details>
 
-Then we will create an [NGINX Gateway Fabric gateway](gateway.yaml) object that will enable traffic into the default namespace based on the following criteria.
+
+Remember from the Kubernetes networking module, we cannot reach the ClusterIP service on HTTP from outside the cluster.
+**note** this is expected to fail.
+
+```bash
+curl -m 3 10.101.152.33
+```
+
+If we go into the cluster, we can then reach the ClusterIP service.
+
+```bash
+curl 10.101.152.33
+```
+
+But we can't stay at Layer 3.  We need Layer 7 capabilities, like HTTP routes and paths.  So for many reasons, a [proper Kubernetes object](https://github.com/nginxinc/nginx-gateway-fabric) is what we need, so that we can control based on Layer 7.
+
+## NGINX Gateway Fabric
+
+We will create an [NGINX Gateway Fabric gateway](gateway.yaml) object that will enable traffic into the default namespace, from outside the cluster, based on the following criteria.
 
 | Property      | Values                 |
 | ------------- | ---------------------- |
