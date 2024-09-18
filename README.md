@@ -39,7 +39,7 @@ article describes configuration steps to allow that.
 ![su - f5admin](su-f5admin-example.png)
 
 ### Credits:
-This lab guide has updates to the original.
+This lab guide is an external disconnected fork of the original, and has updates to the original, including minor fixes.
 The original lab guide authored by the F5 NPI Team a.glanville@f5.com and t.thomas@f5.com and john.wong@f5.com
 The main copy of this lab guide is stored on the F5 private Gitlab behind the F5 VPN and is linked to from the UDF description. This lab guide stored in this GitHub repo is the beginnings of a resource for building training for customers, partners, and others where access to the F5 VPN may be difficult and where rapid updates can be made to this lab without using F5 Gitlab. 
 
