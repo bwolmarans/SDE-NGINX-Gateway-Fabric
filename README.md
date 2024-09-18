@@ -19,7 +19,7 @@ The live environment you will be using will be based on the
 [SDE NGINX Gateway Fabric UDF Blueprint](https://udf.f5.com/b/d2617e7e-018f-4c9a-a15f-09ca55ae8a37#documentation). Create and start a deployment
 if you have not already done so.
 
->**Note**: Starting the lab can take approximately 10 minutes
+>**Note**: Starting the lab can take approximately 5 minutes
 
 * You can access these instances via SSH from your local computer. The [UDF Accessing a component via SSH](https://help.udf.f5.com/en/articles/3347769-accessing-a-component-via-ssh)
 article describes configuration steps to allow that.
