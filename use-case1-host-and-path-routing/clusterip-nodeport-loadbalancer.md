@@ -1,6 +1,6 @@
-# Basic Kubernetes Deployment
+# Basic of Kubernetes Networking
 
-We will now refresh ourselves on Kubernetes basic networking
+We will now refresh ourselves on some Kubernetes basic networking, using a deployment as an example.
 
 # The Cluster
 
@@ -505,7 +505,7 @@ service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   10d
 
 ____
 
-POD and Service lab complete
+Basics of Kubernetes Networking Lab Complete
 ___
 
 
