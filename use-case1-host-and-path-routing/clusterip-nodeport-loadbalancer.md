@@ -370,9 +370,15 @@ Once complete we should be able to find our newly assigned external LoadBalancer
 ```bash
 kubectl get services myweb
 ```
+
+This curl is expected to **succeed** 
+
 ```bash
-curl http://10.1.10.101
+curl -m 3 10.1.10.101
 ```
+
+So, now you have reviewed the basics of Kubernetes networking.
+
 
 <details>
   <summary><b>Example output</b></summary>
@@ -457,8 +463,14 @@ There is no pressing need to clean up these objects if they are of use to you fo
 
 ```bash
 kubectl get all
+```
+```bash
 kubectl delete deployments.apps myweb
+```
+```bash
 kubectl delete service myweb
+```
+```bash
 kubectl get all
 ```
 
