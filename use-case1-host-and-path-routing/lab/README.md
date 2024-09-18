@@ -366,11 +366,26 @@ curl tea.lab.f5npi.net/coffee
 curl coffee.lab.f5npi.net/tea
 ```
 
+<details>
+  <summary><h3<b>Bonus challenge solution</b><h3></summary>
+
+  The links below are the yaml files to configure the coffee application, <b>Gateway</b>, and
+  <b>HTTPRoute</b> to enable both the <b>tea</b> and <b>coffee</b> applications
+
+<!-- markdownlint-disable MD007 -->
+  - [Coffee application and service](../demo/coffee.yaml)
+  - [Coffee and Tea Gateway](bonus/coffee-tea-gateway.yaml)
+  - [Coffee HTTPRoute](bonus/coffee-httpRoute.yaml)
+  - [Tea HTTPRoute](bonus/tea-httpRoute.yaml)
+<!-- markdownlint-enable MD007 -->
+</details>
+
+
 Next, and to prove the relationship of hostnames in Gateways to HTTP Routes, update the Gateway and the Routes to use **cafe.npi.f5net.com**.
 You can delete and recreate, or use kubectl apply to modify.
 
 <details>
-  <summary><h3>Solution</h3></summary>
+  <summary><h4>Solution</h4></summary>
   ```bash
   kubectl apply -f - <<EOF
   apiVersion: gateway.networking.k8s.io/v1
@@ -437,20 +452,6 @@ curl cafe.lab.f5npi.net/coffee
 curl cafe.lab.f5npi.net/tea
 ```
 
-
-<details>
-  <summary><h3><b>Bonus challenge solution</b><h3></summary>
-
-  The links below are the yaml files to configure the coffee application, <b>Gateway</b>, and
-  <b>HTTPRoute</b> to enable both the <b>tea</b> and <b>coffee</b> applications
-
-<!-- markdownlint-disable MD007 -->
-  - [Coffee application and service](../demo/coffee.yaml)
-  - [Coffee and Tea Gateway](bonus/coffee-tea-gateway.yaml)
-  - [Coffee HTTPRoute](bonus/coffee-httpRoute.yaml)
-  - [Tea HTTPRoute](bonus/tea-httpRoute.yaml)
-<!-- markdownlint-enable MD007 -->
-
   Instead of using the above [Coffee and Tea Gateway](bonus/coffee-tea-gateway.yaml), what would
   happen if you used the example config below where the **hostname** field is missing.
 
@@ -480,9 +481,6 @@ curl cafe.lab.f5npi.net/tea
   curl tea.lab.f5npi.net/coffee
   curl coffee.lab.f5npi.net/tea
   ```
-
-  </details>
-
 </details>
 
 ## Clean up
