@@ -1,6 +1,8 @@
 # Basic of Kubernetes Networking
 
 We will now refresh ourselves on some Kubernetes basic networking, using a deployment as an example.
+DNS is outside the scope of this.
+
 
 # The Cluster
 
