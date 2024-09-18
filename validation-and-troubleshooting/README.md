@@ -100,6 +100,8 @@ We can check all the common services and pods using `get all`.  Here we want to 
 kubectl -n nginx-gateway get all
 ```
 
+## --- STOP HERE - The rest is for Troubleshooting only if needed later in the lab ---
+
 Next we might look for more details related to the nginx-gateway pod using the **describe** option.
 
 ```bash
