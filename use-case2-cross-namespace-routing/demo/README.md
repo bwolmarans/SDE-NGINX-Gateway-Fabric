@@ -259,6 +259,8 @@ Check the new httpRoute health.
 
 ```bash
 kubectl get httproutes retail-httproute
+```
+```bash
 kubectl describe httproutes retail-httproute
 ```
 
@@ -331,7 +333,7 @@ kubectl describe httproutes retail-httproute
 
 Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRoute** we just
 deployed that is linked to the **retail-gateway** object.  However, this time it fails... why?
-Because we do not have a referenceGrant configured to allow this traffic.
+Because we do not have a [ReferenceGrant](https://gateway-api.sigs.k8s.io/api-types/referencegrant/) configured to allow this traffic.
 
 ```bash
 curl hats.lab.f5npi.net/hats
