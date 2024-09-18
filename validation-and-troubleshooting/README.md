@@ -53,11 +53,12 @@ If any of the nodes show something other than Ready you might review the latest 
 kubectl describe nodes w1-mgmt.lab.f5npi.net
 ```
 
-Next check for any pod that is explicitly not in the the running state.
+Check all the pods
 
 ```bash
 kubectl get pods --all-namespaces
 ```
+Check for any pod that is explicitly not in the the running state.
 
 ```bash
 kubectl get pods --all-namespaces --field-selector=status.phase!=Running
