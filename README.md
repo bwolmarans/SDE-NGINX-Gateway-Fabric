@@ -45,7 +45,7 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 * Fix It: You are given a broken configuration and you are expected to fix the issue.
 
 ### Complete these Use Cases, in order.
-
+* [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
 * [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
 * [Modify Request Headers](use-case3-mod-req-headers/README.md)
@@ -53,12 +53,6 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 * [Advanced Routing and Split Traffic Connections](use-case5-and-6-advanced-routing-traffic-splitting/README.md)
 
 ## ---------------- end of main lab section ----------------------
-
-### Optional: Validate the Kubernetes and NGINX Gateway Fabric environment
-
-We will discuss some basic validation options in the lecture.  We will consider the Kubernetes environment, the base NGINX Gateway Fabric install and objects used in many of the demos and labs.  Review the [Validation and Troubleshooting](../main/validation-and-troubleshooting/README.md) to see these command examples along with some additional tips.
-
-* [Validation and Troubleshooting](../main/validation-and-troubleshooting/README.md)
 
 ### Bonus Labs
 
