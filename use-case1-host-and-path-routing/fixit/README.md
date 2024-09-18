@@ -130,10 +130,12 @@ Next test the basic functionality for /coffee and /tea
 
 ```bash
 curl http://coffee.lab.f5npi.net/coffee
+```
+```bash
 curl http://socks.lab.f5npi.net/socks
 ```
 
-Now consider the validation steps we discussed in the lecture and try to apply those now.
+Now consider the validation steps we discussed in the lecture and try to apply those now. **Fix it**.
 
 ## Clean up
 
