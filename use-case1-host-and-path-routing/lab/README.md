@@ -354,6 +354,8 @@ Once done you can test your solution using the following two curl commands.
 
 ```bash
 curl tea.lab.f5npi.net/tea
+```
+```bash
 curl coffee.lab.f5npi.net/coffee
 ```
 
