@@ -16,12 +16,6 @@ This lesson includes one demo, one interactive lab and one break fix lab.
 During the host and path routing unit of the up-skilling session there is a short demo highlighting [how **Pods** can be exposed using
 services](clusterip-nodeport-loadbalancer.md). This is a link to that PODS to Services demo.
 
-* [PODS to Services demo](clusterip-nodeport-loadbalancer.md).
-
-## Up-skill session
-
-We will now go into the actual labs which will consist of the following:
-
 1. [Coffee Demo](demo/README.md): Configure basic routing to a *coffee* application.
 2. [Tea Lab](lab/README.md): You will configure basic routing to a *tea* application,
 3. [Coffee and Socks Fix It Lab](fixit/README.md): There are *coffee* and *socks* applications with
