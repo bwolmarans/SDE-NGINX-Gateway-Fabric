@@ -205,7 +205,15 @@ Connection to ctlr-mgmt.lab.f5npi.net closed.
 
 </details>
 
-Now we are going to edit our **ClusterIP** service and change it to the **NodePort** service.  This type of service is really helpful to quickly enable access to a service from outside the Kubernetes Cluster. The **NodePort** service will expose a high level port on every Compute node in the cluster including the control plane that will connect to the myweb service. It is possible to setup a web server outside of the Kubernetes cluster and use the Node IP addresses and Port combination to define the upstream servers.  However, in this case the proxy server will need to come up with a method to determine if a node is offline or a new node comes on line. Generally this is a good option for developers but it is not commonly used for exposing services in production or to external customers.
+Now we are going to edit our **ClusterIP** service and change it to the **NodePort** service.  
+
+This type of service is really helpful to quickly enable access to a service from outside the Kubernetes Cluster. The **NodePort** service will expose a high level port on every Compute node in the cluster including the control plane that will connect to the myweb service. 
+
+It is possible to setup a web server outside of the Kubernetes cluster and use the Node IP addresses and Port combination to define the upstream servers.  
+
+However, in this case the proxy server will need to come up with a method to determine if a node is offline or a new node comes on line.
+
+Generally this is a good option for developers but it is not commonly used for exposing services in production or to external customers.
 
 You are now going to use Vi to edit the service. Fine ClusterIP and change to NodePort.
 
@@ -354,7 +362,11 @@ Now we can edit our NodePort service and change it to a LoadBalancer service.  O
 
 ```bash
 kubectl edit service myweb
+```
+```bash
 kubectl get services myweb
+```
+```bash
 curl http://10.1.10.101
 ```
 
