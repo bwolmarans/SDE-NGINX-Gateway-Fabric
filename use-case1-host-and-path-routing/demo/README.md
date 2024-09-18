@@ -116,7 +116,7 @@ spec:
   - name: http
     port: 80
     protocol: HTTP
-    hostname: coffee.lab.f5npi.net
+    hostname: cafe.lab.f5npi.net
 EOF
 ```
 
@@ -155,7 +155,7 @@ kubectl describe gateways cafe-gateway
       Allowed Routes:
         Namespaces:
           From:  Same
-      Hostname:  coffee.lab.f5npi.net
+      Hostname:  cafe.lab.f5npi.net
       Name:      http
       Port:      80
       Protocol:  HTTP
