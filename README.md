@@ -6,7 +6,7 @@ The main copy of this lab guide is stored on the F5 private Gitlab behind the F5
 Welcome to this NGINX Gateway Fabric (NGF) project where we explore and demonstrate different use
 cases. 
 
-NGINX Gateway Fabric is already installed; this is not an installation lab.
+### Note: NGINX Gateway Fabric is already installed; this is not an installation lab.
 
 We will be providing labs based on published use cases supported by the NGINX Gateway Fabric **stable** release.
 
