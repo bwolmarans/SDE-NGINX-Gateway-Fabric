@@ -13,7 +13,7 @@ these two namespaces.  This is a task that might be completed by the **Applicati
 
 ## Interactive Labs
 
-Copy and paste the following code snippet to deploy the coffee application and service.
+Copy and paste the following code snippet to deploy the **Shoes** application and service.
 
 > If you prefer to manually create and deploy this application, click [here](shoes.yaml) for the
 > YAML file.
@@ -136,6 +136,8 @@ Check the new retail-gateway health.
 
 ```bash
 kubectl get gateways retail-gateway
+```
+```bash
 kubectl describe gateways retail-gateway
 ```
 
@@ -284,6 +286,8 @@ Now you can check on the status of your new tea httpRoute rule.
 
 ```bash
 kubectl -n footwear get referenceGrant access-to-footwear-services
+```
+```bash
 kubectl -n footwear describe referenceGrant access-to-footwear-services
 ```
 
