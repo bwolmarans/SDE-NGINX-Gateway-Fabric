@@ -81,8 +81,6 @@ namespace based on the following criteria.
 
 This could be the responsibility of the **cluster administrator**.
 
-## Please note: You can skip creating this gateway object if already created in the Demo 
-
 Copy and paste the following code snippet to deploy the coffee gateway.
 
 > If you want to see the yaml file for this gateway, click [here](gateway.yaml).
@@ -99,7 +97,7 @@ spec:
   - name: http
     port: 80
     protocol: HTTP
-    hostname: cafe.lab.f5npi.net
+    hostname: tea.lab.f5npi.net
 EOF
 ```
 
@@ -308,7 +306,7 @@ kubectl describe httproutes tea
 Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRoute** we just deployed and that is linked the **cafe-gateway** object.
 
 ```bash
-curl cafe.lab.f5npi.net/tea
+curl tea.lab.f5npi.net/tea
 ```
 
 <details>
@@ -331,6 +329,7 @@ curl cafe.lab.f5npi.net/tea
   [Click here](tea-httpRoute.yaml) to see a solution for a <b>HTTPRoute</b> configuration.
 </details>
 
+
 ## Clean up
 
 When done with this lab you can clean up the objects by running the following commands.
@@ -342,7 +341,6 @@ kubectl delete gateways cafe-gateway
 kubectl delete httproutes tea
 ```
 
----
 ---
 
 ## Bonus challenge
@@ -365,6 +363,14 @@ But the following commands should return an error.
 curl tea.lab.f5npi.net/coffee
 curl coffee.lab.f5npi.net/tea
 ```
+
+Next, and to prove hostnames are independent from routes, can update the Gateway to use **cafe.npi.f5net.com** and do:
+
+```bash
+curl cafe.lab.f5npi.net/coffee
+curl cafe.lab.f5npi.net/tea
+```
+
 
 <details>
   <summary><h3><b>Bonus challenge solution</b><h3></summary>
