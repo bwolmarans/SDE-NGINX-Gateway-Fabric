@@ -358,11 +358,15 @@ This image is trying to show that relationship.
 
 ![LoadBalancer](images/myweb-service-loadbalancer.png)
 
-Now we can edit our NodePort service and change it to a LoadBalancer service.  Once complete we should be able to find our newly assigned external LoadBalancer IP address and test our myweb deployment.
+Now you must edit your **NodePort** service and change it to a **LoadBalancer** service.  
+You will use Vi editor for this again.
 
 ```bash
 kubectl edit service myweb
 ```
+
+Once complete we should be able to find our newly assigned external LoadBalancer IP address and test our myweb deployment.
+
 ```bash
 kubectl get services myweb
 ```
