@@ -31,7 +31,8 @@ article describes configuration steps to allow that.
 
 ## Use Cases
 
-Each use case will consist of a Demo, Lab, and Fix it.
+In this lab, you will be completing the Use Cases.
+Each Use Case will consist of a Demo, Lab, and Fix it.
 
 * Demo: Instructor will drive.
 * Interactive Lab: You are expected configure and validate a use case.
