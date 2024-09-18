@@ -4,10 +4,11 @@ We will now refresh ourselves on Kubernetes basic networking
 
 # The Cluster
 
-This is a simple cluster, take a quick look at the IP Addresses for your Nodes in your Cluster:
+This is a simple 4-node cluster
 
 ![myweb deployment](images/myweb-deployment.png)
 
+Take a quick look at the IP Addresses for your Nodes in your Cluster:
 ```bash
 kubectl get nodes -owide
 ```
