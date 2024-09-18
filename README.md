@@ -35,22 +35,22 @@ The main copy of this lab guide is stored on the F5 private Gitlab behind the F5
 
 
 
-## Use Cases
+## Lab Use Cases ( Lab Modules )
 
-In this lab, you will be completing the Use Cases.
+In this lab, you will be completing the Use Cases aka Lab Modules.
 Each Use Case will consist of a Demo, Lab, and Fix it.
 
 * Demo: Instructor will drive.
 * Interactive Lab: You are expected configure and validate a use case.
 * Fix It: You are given a broken configuration and you are expected to fix the issue.
 
-### Complete these Use Cases, in order.
-* [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
-* [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
-* [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
-* [Modify Request Headers](use-case3-mod-req-headers/README.md)
-* [HTTPS Termination](use-case4-https-termination/README.md)
-* [Advanced Routing and Split Traffic Connections](use-case5-and-6-advanced-routing-traffic-splitting/README.md)
+### Complete these Lab/Moduels Use Cases, in order.
+* Use Case 1: [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
+* Use Case 2: [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
+* Use Case 3: [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
+* Use Case 4: [Modify Request Headers](use-case3-mod-req-headers/README.md)
+* Use Case 5: [HTTPS Termination](use-case4-https-termination/README.md)
+* Use Case 6: [Advanced Routing and Split Traffic Connections](use-case5-and-6-advanced-routing-traffic-splitting/README.md)
 
 ## ---------------- end of main lab section ----------------------
 
