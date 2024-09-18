@@ -1,18 +1,15 @@
+# Basic Kubernetes Deployment
+
+To refresh ourselves on Kubernetes basic networking, first we create a basic nginx deployment.
+
 # The Cluster
 
-Take a quick look at the IP Addresses for your Nodes in your Cluster:
+This is a simple cluster, take a quick look at the IP Addresses for your Nodes in your Cluster:
+![myweb deployment](images/myweb-deployment.png)
 
 ```bash
 kubectl get nodes -owide
 ```
-
-# Basic Kubernetes Deployment
-
-First we create a basic nginx deployment.
-
-![myweb deployment](images/myweb-deployment.png)
-
-The actual creation time should be less than a minute, you may see `ContainerCreating` you may need to wait a few more seconds for the process to complete.
 
 ```bash
 kubectl create deployment myweb --image=nginx --port=80
@@ -20,6 +17,8 @@ kubectl create deployment myweb --image=nginx --port=80
 ```bash
 kubectl get pods -o wide
 ```
+
+The actual creation time should be less than a minute, you may see `ContainerCreating` you may need to wait a few more seconds for the process to complete.
 
 <details>
   <summary><b>Example output</b></summary>
