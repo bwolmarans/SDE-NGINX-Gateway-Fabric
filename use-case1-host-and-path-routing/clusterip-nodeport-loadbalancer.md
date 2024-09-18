@@ -284,11 +284,14 @@ You can now test out this feature using one of the nodes public IP address on th
 ```bash
 kubectl get nodes -owide
 ```
-
-**Note** There can be many servcies on a node listening on port 80. So instead of port 80, use the unique port for your service, 31780 in the example here.
+Try to curl to your nginx using the Node IP and the default port 80. **Note** this is expected to fail.
+```bash
+curl 10.1.10.7
+```
+Why did this fail? It failed because nothing is listening on port 80. There can be many services on a node listening on port 80. So instead of port 80, use the unique port for your service, 31780 in the example here.
 
 ```bash
-curl 10.1.10.4:31:31780
+curl 10.1.10.7:31780
 ```
 
 <details>
