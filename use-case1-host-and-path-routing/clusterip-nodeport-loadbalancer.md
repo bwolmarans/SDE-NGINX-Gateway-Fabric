@@ -332,7 +332,18 @@ Commercial support is available at
 
 </details>
 
-The final transition is to **LoadBalancer**.  The **LoadBalancer** service is not part of the NGINX Gateway Fabric configuration.  The ability to request a **LoadBalancer** service is something that the Cloud provider such as Google, Azure, or Amazon would enable.  In our UDF lab environment we have configured [MetalLB](https://metallb.universe.tf/) to provide this service.  For the purpose of our discussion today it simply means that we have a service available in the environment that will provide an externally available IP address to your service to be used to expose your service as you see necessary.  The LoadBalancer service will use the NodePort IP Addresses and port values to enter the cluster.  The ClusterIP service will route traffic to the ClusterIP service that supports the myweb deployment and POD.
+The final transition is to **LoadBalancer**.  The **LoadBalancer** service is not part of the NGINX Gateway Fabric configuration. 
+
+The ability to request a **LoadBalancer** service is something that the Cloud provider such as Google, Azure, or Amazon would enable.  
+
+If you are not using a hyperscaler load balancer, and you need to use a load balancer of your own, you have some options.
+
+In our UDF lab environment for simplicity we have configured [MetalLB](https://metallb.universe.tf/) as our load balancer to provide this service.  
+But, you might be better off using [BigIP](https://github.com/F5Networks/k8s-bigip-ctlr/) or [NGINX](https://www.f5.com/content/dam/f5/corp/global/pdf/white-paper/Whitepaper-Get-Me-to-the-Cluster.pdf) as your Loadbalancer
+
+For the purpose of our discussion today MetalLB simply means that we have a service available in the environment that will provide an externally available IP address to your service to be used to expose your service as you see necessary.  The LoadBalancer service will use the NodePort IP Addresses and port values to enter the cluster.  
+
+The ClusterIP service will route traffic to the ClusterIP service that supports the myweb deployment and POD.
 
 This image is trying to show that relationship.
 
