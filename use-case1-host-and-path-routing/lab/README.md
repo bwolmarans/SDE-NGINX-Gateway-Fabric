@@ -81,6 +81,8 @@ namespace based on the following criteria.
 
 This could be the responsibility of the **cluster administrator**.
 
+## Please note: You can skip creating this gateway object if already created in the Demo 
+
 Copy and paste the following code snippet to deploy the coffee gateway.
 
 > If you want to see the yaml file for this gateway, click [here](gateway.yaml).
@@ -97,7 +99,7 @@ spec:
   - name: http
     port: 80
     protocol: HTTP
-    hostname: tea.lab.f5npi.net
+    hostname: cafe.lab.f5npi.net
 EOF
 ```
 
