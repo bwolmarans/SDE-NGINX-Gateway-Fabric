@@ -26,7 +26,7 @@ myweb-68fc94d654-mc5tz   1/1     Running   0          10s   10.244.67.143   w1-m
 
 </details>
 
-Try to curl to your POD IP from the Bastion Host. ***Note** this is expected to fail.
+Try to curl to your POD IP from the Bastion Host. **Note** this is expected to fail.
 
 >**Note**: Your POD IP address will most likely be different than what is shown in the following example.
 
@@ -112,14 +112,20 @@ myweb   ClusterIP   10.101.177.48   <none>        80/TCP    12s   app=myweb
 ```
 
 </details>
+So is a ClusterIP accessible from outside the Cluster? Try to curl to your Cluster IP from the Bastion Host. **Note** this is expected to fail.
 
+>**Note**: Your POD IP address will most likely be different than what is shown in the following example.
+
+```bash
+curl -m 3 10.244.67.143
+```
 Now again if we want to test our new ClusterIP service we have to do this from within the cluster so we will sign in to the ctlr-mgmt node again and test our service.
 
 ```bash
 ssh ctlr-mgmt.lab.f5npi.net
 ```
 ```bash
-curl http://10.101.177.48
+curl 10.101.177.48
 ```
 ```bash
 exit
