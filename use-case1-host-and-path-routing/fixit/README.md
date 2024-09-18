@@ -151,7 +151,7 @@ kubectl delete gateways cafe-gateway
 <details>
   <summary><h3><b>Solution</b><h3></summary>
 
-  [Click here](httproute-combined.solution.yaml) to see a solution for a **HTTPRoute** configuration.
+  [Click here](httproute-combined-solution.yaml) to see a solution for a **HTTPRoute** configuration.
 </details>
 
 ## Source files
