@@ -27,11 +27,11 @@ export do='--dry-run=client -o yaml'
 ```bash
 export dos='--dry-run=server'
 ```
-
 1. Create a .vimrc file that at least sets some common yaml editor values.  You might consider adding highlighting for the current column and line too `set cuc cul`.
 
 ```bash
-echo "set tabstop=2
+color desert
+set tabstop=2
 set expandtab
 set shiftwidth=2
 set cuc cul" > ~/.vimrc
