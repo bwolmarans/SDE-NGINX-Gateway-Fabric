@@ -41,7 +41,7 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 * Interactive Lab: You are expected configure and validate a use case.
 * Fix It: You are given a broken configuration and you are expected to fix the issue.
 
-### List of Use Cases
+### List of Use Cases - Complete all of these, in order.
 
 * [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
