@@ -54,6 +54,8 @@ Next, participants join break out groups and be expected to complete the **Inter
 The last exercise of the upskilling session asks the participants to deploy a broken solution and
 then using their validation and troubleshooting knowledge solve the mystery.
 
+### List of Use Cases
+
 * [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
 * [Modify Request Headers](use-case3-mod-req-headers/README.md)
