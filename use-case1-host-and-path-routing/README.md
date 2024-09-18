@@ -21,4 +21,3 @@ This lesson includes one demo, one interactive lab and one break fix lab.
 
 Previous: [NGINX Gateway Fabric](../README.md)
 
-Next: [Demo](demo/README.md)
