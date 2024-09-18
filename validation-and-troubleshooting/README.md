@@ -41,12 +41,6 @@ set cuc cul" > ~/.vimrc
 
 If you are initially checking a new Kubernetes cluster you might run through the following checks to validate the cluster health.
 
-Review the latest events in the nginx-gateway namespace.
-
-```bash
-kubectl -n nginx-gateway get events
-```
-
 Review all the events on the system but sort them by creation time
 
 ```bash
