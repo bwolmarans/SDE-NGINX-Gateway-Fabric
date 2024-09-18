@@ -366,10 +366,12 @@ curl tea.lab.f5npi.net/coffee
 curl coffee.lab.f5npi.net/tea
 ```
 
-Next, and to prove hostnames are independent from routes, can update the Gateway to use **cafe.npi.f5net.com** and do:
+Next, and to prove hostnames are independent from routes, update the Gateway to use **cafe.npi.f5net.com** and do:
 
 ```bash
 curl cafe.lab.f5npi.net/coffee
+```
+```bash
 curl cafe.lab.f5npi.net/tea
 ```
 
