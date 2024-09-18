@@ -491,7 +491,7 @@ Here are sample commands that might help you with the challenge cleanup.
 kubectl delete deployments.apps tea coffee
 kubectl delete service tea coffee
 kubectl delete gateways cafe-gateway
-kubectl delete httproutes tea coffee
+kubectl delete httproutes tea coffee route-tea route-coffee
 ```
 
 ## Source files
