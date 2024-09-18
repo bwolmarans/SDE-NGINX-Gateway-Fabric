@@ -103,18 +103,19 @@ kubectl -n nginx-gateway get all
 Next we might look for more details related to the nginx-gateway pod using the **describe** option.
 
 ```bash
-kubectl -n nginx-gateway describe pod nginx-gateway-[TAB][TAB]
+kubectl -n nginx-gateway describe pod nginx-gateway-[TAB]
 ```
 
->**Note**: You can query the pod for container names using the deployment like this: `kubectl -n nginx-gateway get deployments nginx-gateway -o jsonpath='{.spec.template.spec.containers[*].name}'​`
+>**Note**: You can query the pod for container names using the deployment like this:
+>`kubectl -n nginx-gateway get deployments nginx-gateway -o jsonpath='{.spec.template.spec.containers[*].name}'​`
 
 Next you might want to review the logs for both of the nginx-gateway fabric containers.
 
 ```bash
-kubectl -n nginx-gateway logs pods/nginx-gateway-[TAB][TAB] nginx-gateway
+kubectl -n nginx-gateway logs pods/nginx-gateway-[TAB] nginx-gateway
 ```
 ```bash
-kubectl -n nginx-gateway logs pods/nginx-gateway-[TAB][TAB] nginx
+kubectl -n nginx-gateway logs pods/nginx-gateway-[TAB] nginx
 ```
 
 ### NGINX Gateway Fabric Gateway and Gatewayclass health
