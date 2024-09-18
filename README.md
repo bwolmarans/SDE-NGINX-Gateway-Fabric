@@ -5,6 +5,8 @@ cases.
 
 ### Note: NGINX Gateway Fabric is already installed; this is not an installation lab.
 
+[Installation instructions are here, but you will not need them for this lab](https://docs.nginx.com/nginx-gateway-fabric/installation/installing-ngf)
+
 We will be providing labs based on published use cases supported by the NGINX Gateway Fabric **stable** release.
 
 Features only found in the **edge** release are **not**  included in this content.
