@@ -1,4 +1,4 @@
-# Demo - exposing deployments
+# Basic Kubernetes Deployment
 
 First we create a basic nginx deployment.
 
