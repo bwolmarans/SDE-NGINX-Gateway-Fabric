@@ -366,7 +366,69 @@ curl tea.lab.f5npi.net/coffee
 curl coffee.lab.f5npi.net/tea
 ```
 
-Next, and to prove hostnames are independent from routes, update the Gateway to use **cafe.npi.f5net.com** and do:
+Next, and to prove the relationship of hostnames in Gateways to HTTP Routes, update the Gateway and the Routes to use **cafe.npi.f5net.com**.
+You can delete and recreate, or use kubectl apply to modify.
+
+<details>
+  <summary><h3>Solution</h3></summary>
+  ```bash
+  kubectl apply -f - <<EOF
+  apiVersion: gateway.networking.k8s.io/v1
+  kind: Gateway
+  metadata:
+    name: cafe-gateway
+  spec:
+    gatewayClassName: nginx
+    listeners:
+    - name: http-cafe
+      port: 80
+      protocol: HTTP
+      hostname: cafe.lab.f5npi.net
+  EOF
+  ```
+  ```bash  
+  k apply -f - <<EOF
+  apiVersion: gateway.networking.k8s.io/v1
+  kind: HTTPRoute
+  metadata:
+    name: route-coffee
+  spec:
+    parentRefs:
+    - name: cafe-gateway
+      sectionName: http-cafe
+    rules:
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /coffee
+      backendRefs:
+      - name: coffee
+        port: 80
+  EOF
+  ```
+  ```bash
+  k apply -f - <<EOF
+  apiVersion: gateway.networking.k8s.io/v1
+  kind: HTTPRoute
+  metadata:
+    name: route-tea
+  spec:
+    parentRefs:
+    - name: cafe-gateway
+      sectionName: http-cafe
+    rules:
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /tea
+      backendRefs:
+      - name: tea
+        port: 80
+  EOF
+  ```
+</details>
+
+## Test
 
 ```bash
 curl cafe.lab.f5npi.net/coffee
