@@ -37,25 +37,22 @@ article describes configuration steps to allow that.
 
 ![su - f5admin](su-f5admin-example.png)
 
+## Use Cases
+
 Each use case will consist of a Demo, Lab, and Fix it.
 
 ### Demo
 
-We start each use case session with the **Demo Lab** where the instructor will be the one sharing
-and driving the configuration of a use case. Participants, if they want, can follow along and run
-through the same set of demo labs using their running UDF lab environments.
+The instructor will drive.
 
 ### Interactive lab
 
 Next, participants join break out groups and be expected to complete the **Interactive Lab**.
-Participants may need to update configuration files in order to get a working solution.
 
 ### Fix it
 
 The last exercise of the upskilling session asks the participants to deploy a broken solution and
 then using their validation and troubleshooting knowledge solve the mystery.
-
-## Use Cases
 
 * [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
