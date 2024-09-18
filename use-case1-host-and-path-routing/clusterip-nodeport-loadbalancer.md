@@ -31,7 +31,7 @@ Try to curl to your POD IP from the Bastion Host. ***Note** this is expected to 
 ```bash
 curl -m 3 10.244.67.143
 ```
-Why did this fail? Because there is no service defined.
+Why did this fail? Because this ip is not exposed outside the cluster.
 So how can you test this basic NGINX web server? You have to go into the cluster, and generate a request from one of the nodes in the cluster.  This pod has no service defined and as such is only available from within the Kubernetes cluster using the POD IP Address.
 
 ```bash
