@@ -107,6 +107,8 @@ Check the new cafe-gateway health.
 
 ```bash
 kubectl get gateways cafe-gateway
+```
+```bash
 kubectl describe gateways cafe-gateway
 ```
 
@@ -223,6 +225,8 @@ EOF
 
 ```bash
 kubectl describe httproutes coffee
+```
+```bash
 kubectl get httproutes coffee
 ```
 
