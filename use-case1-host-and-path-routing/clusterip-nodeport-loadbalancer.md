@@ -5,6 +5,7 @@ To refresh ourselves on Kubernetes basic networking, first we create a basic ngi
 # The Cluster
 
 This is a simple cluster, take a quick look at the IP Addresses for your Nodes in your Cluster:
+
 ![myweb deployment](images/myweb-deployment.png)
 
 ```bash
