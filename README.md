@@ -37,13 +37,7 @@ article describes configuration steps to allow that.
 
 ![su - f5admin](su-f5admin-example.png)
 
-Each use case will have all the source files provided.
-
-### How to validate an existing NGINX Gateway Fabric environment
-
-We will discuss some basic validation options in the lecture.  We will consider the Kubernetes environment, the base NGINX Gateway Fabric install and objects used in many of the demos and labs.  Review the [Validation and Troubleshooting document](../main/validation-and-troubleshooting/README.md) to see these command examples along with some additional tips.
-
-* [Validation and Troubleshooting document](../main/validation-and-troubleshooting/README.md)
+Each use case will consist of a Demo, Lab, and Fix it.
 
 ### Demo
 
@@ -68,6 +62,12 @@ then using their validation and troubleshooting knowledge solve the mystery.
 * [Modify Request Headers](use-case3-mod-req-headers/README.md)
 * [HTTPS Termination](use-case4-https-termination/README.md)
 * [Advanced Routing and Split Traffic Connections](use-case5-and-6-advanced-routing-traffic-splitting/README.md)
+
+### Optional: Validate the Kubernetes and NGINX Gateway Fabric environment
+
+We will discuss some basic validation options in the lecture.  We will consider the Kubernetes environment, the base NGINX Gateway Fabric install and objects used in many of the demos and labs.  Review the [Validation and Troubleshooting](../main/validation-and-troubleshooting/README.md) to see these command examples along with some additional tips.
+
+* [Validation and Troubleshooting](../main/validation-and-troubleshooting/README.md)
 
 ### Bonus Labs
 
