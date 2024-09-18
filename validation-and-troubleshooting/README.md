@@ -41,12 +41,6 @@ set cuc cul" > ~/.vimrc
 
 If you are initially checking a new Kubernetes cluster you might run through the following checks to validate the cluster health.
 
-Review all the events on the system but sort them by creation time
-
-```bash
-kubectl get events --all-namespaces $sb
-```
-
 Check the nodes, ensure they have a status of **Ready**.
 
 ```bash
