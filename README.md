@@ -46,7 +46,7 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 * [HTTPS Termination](use-case4-https-termination/README.md)
 * [Advanced Routing and Split Traffic Connections](use-case5-and-6-advanced-routing-traffic-splitting/README.md)
 
-## --------------------------------------- end of main lab section ------------------------------------------------
+## ---------------- end of main lab section ----------------------
 
 ### Optional: Validate the Kubernetes and NGINX Gateway Fabric environment
 
@@ -65,7 +65,7 @@ This bonus lab provides an example of how to use one Gateway with two namespaces
 
 * [Gateways and Routes](./bonus-labs/gateways-and-routes/README.md)
 
-## Installing NGINX Gateway Fabric
+## Note on Installing NGINX Gateway Fabric
 
 >**Note**: You do **NOT** need to install NGINX Gateway Fabric when using the SDE UDF lab designed for this Up Skilling session.
 
