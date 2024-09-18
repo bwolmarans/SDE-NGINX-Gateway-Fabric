@@ -298,6 +298,15 @@ kubectl describe httproutes coffee
 </details>
 
 
+
+## Testing
+
+Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRoute** we just deployed that is linked to the **cafe-gateway** object.
+
+```bash
+curl coffee.lab.f5npi.net/coffee
+```
+
 <details>
   <summary><b>Example output</b></summary>
 
@@ -312,53 +321,6 @@ kubectl describe httproutes coffee
 
 </details>
 
-Next we will create the **HTTPRoute** that will allow traffic inbound to our coffee application and leverage the NGINX Gateway Fabric gateway object.  This object will also define the path uri of **/tea** and backend service (POD) to route traffic to.  This could be the responsibility of the **Application Developer**.
-
-Copy and paste the following code snippet to deploy the coffee gateway.
-
-> If you prefer to manually create and deploy this HTTPRoute, click [here](httpRoute-coffee.yaml)
-> for the YAML file.
-
-```bash
-kubectl create -f - <<EOF
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: tea
-spec:
-  parentRefs:
-  - name: cafe-gateway
-    sectionName: http
-  rules:
-  - matches:
-    - path:
-        type: PathPrefix
-        value: /tea
-    backendRefs:
-    - name: tea
-      port: 80
-EOF
-```
-
-
-```bash
-kubectl get httproutes tea
-```
-
-```bash
-kubectl describe httproutes tea
-```
-
-## Testing
-
-Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRoute** we just deployed that is linked to the **cafe-gateway** object.
-
-```bash
-curl cafe.lab.f5npi.net/coffee
-```
-```bash
-curl cafe.lab.f5npi.net/tea
-```
 
 
 ## Clean up
