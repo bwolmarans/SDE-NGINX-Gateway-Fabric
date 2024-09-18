@@ -89,6 +89,8 @@ But we can't stay at Layer 3.  We need Layer 7 capabilities, like HTTP routes an
 
 ## NGINX Gateway Fabric
 
+**Note** NGINX Gateway Fabric is already installed.  [Installation instructions are here if you need a link to them, but we are not installing in this lab.](https://docs.nginx.com/nginx-gateway-fabric/installation/installing-ngf/manifests/)
+
 We will create an [NGINX Gateway Fabric gateway](gateway.yaml) object that will enable traffic into the default namespace, from outside the cluster, based on the following criteria.
 
 | Property      | Values                 |
