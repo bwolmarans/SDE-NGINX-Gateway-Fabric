@@ -24,9 +24,15 @@ myweb-68fc94d654-mc5tz   1/1     Running   0          10s   10.244.67.143   w1-m
 
 </details>
 
-How can you test this basic NGINX web server? You have generate a request from one of the nodes in the cluster.  This pod has no service defined and as such is only available from within the Kubernetes cluster using the POD IP Address.
+Try to curl to your POD IP from the Bastion Host. Note that this is expected to fail.
 
 >**Note**: Your POD IP address will most likely be different than what is shown in the following example.
+
+```bash
+curl -m 3 10.244.67.143
+```
+Why did this fail? Because there is no service defined.
+So how can you test this basic NGINX web server? You have to go into the cluster, and generate a request from one of the nodes in the cluster.  This pod has no service defined and as such is only available from within the Kubernetes cluster using the POD IP Address.
 
 ```bash
 ssh ctlr-mgmt.lab.f5npi.net
