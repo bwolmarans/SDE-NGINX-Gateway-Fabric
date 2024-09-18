@@ -49,6 +49,9 @@ Try to curl to one of your Node IP's from the Bastion Host. **Note** this is exp
 ```bash
 kubectl get nodes -owide
 ```
+```bash
+curl -m 3 10.1.10.7
+```
 
 Why did this fail? Because this is just the IP Address of the Node, and there is no NodePort service for this deployment.
 
