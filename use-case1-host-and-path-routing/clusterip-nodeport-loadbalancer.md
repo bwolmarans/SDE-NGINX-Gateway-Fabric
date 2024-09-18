@@ -8,6 +8,8 @@ The actual creation time should be less than a minute, you may see `ContainerCre
 
 ```bash
 kubectl create deployment myweb --image=nginx --port=80
+```
+```bash
 kubectl get pods -o wide
 ```
 
@@ -87,7 +89,11 @@ Now we are going to create ClusterIP for our myweb deployment.  We want to do th
 
 ```bash
 exit
+```
+```bash
 kubectl expose deployment myweb --port=80
+```
+```bash
 kubectl get service myweb -owide
 ```
 
@@ -111,7 +117,11 @@ Now again if we want to test our new ClusterIP service we have to do this from w
 
 ```bash
 ssh ctlr-mgmt.lab.f5npi.net
+```
+```bash
 curl http://10.101.177.48
+```
+```bash
 exit
 ```
 
@@ -119,8 +129,14 @@ exit
   <summary><b>Example output</b></summary>
 
 ```bash
-f5admin@bastion:~$ ssh ctlr-mgmt.lab.f5npi.net
-Activate the web console with: systemctl enable --now cockpit.socket
+ssh ctlr-mgmt.lab.f5npi.net
+```
+
+Activate the web console with: 
+
+```bash
+systemctl enable --now cockpit.socket
+```
 
 Last login: Mon Jul 15 23:16:51 2024 from 10.1.1.11
 [f5admin@ctlr-mgmt ~]$ curl http://10.101.177.48
