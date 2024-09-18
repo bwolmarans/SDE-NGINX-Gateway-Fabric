@@ -1,6 +1,6 @@
 # Basic Kubernetes Deployment
 
-To refresh ourselves on Kubernetes basic networking, first we create a basic nginx deployment.
+We will now refresh ourselves on Kubernetes basic networking
 
 # The Cluster
 
@@ -11,6 +11,8 @@ This is a simple cluster, take a quick look at the IP Addresses for your Nodes i
 ```bash
 kubectl get nodes -owide
 ```
+
+Now, we create a basic nginx deployment.
 
 ```bash
 kubectl create deployment myweb --image=nginx --port=80
