@@ -321,9 +321,12 @@ kubectl describe httproutes coffee
 ## Testing
 
 Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRoute** we just deployed that is linked to the **cafe-gateway** object.
+Recall that we specified the hostname **cafe.lab.f5npi.net** higher up.
+
+
 
 ```bash
-curl coffee.lab.f5npi.net/coffee
+curl cafe.lab.f5npi.net/coffee
 ```
 
 <details>
