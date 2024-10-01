@@ -227,16 +227,15 @@ kubectl edit service myweb
 ```
 >**Note**: The default command line editor is Vim.
 
-Use the arrow keys to go to near the bottom of the file, find "Type: ClusterIP" and use the arrow keys to go to the first letter of ClusterIP
+- Use the arrow keys to go to near the bottom of the file, find "Type: ClusterIP" and use the arrow keys to go to the first letter of ClusterIP
+- Press i to get into insert mode
+- Press the delete key several times to delete the word ClusterIP
+- type NodePort
+- and save your changes and exit by typing \<ESC\>:wq\<ENTER\>
 
-Press i to get into insert mode
+The changes are automatically applied by the K8s API.
 
-Press the delete key several times to delete the word ClusterIP
-
-Type NodePort
-
-and save your changes and exit by typing \<ESC\>:wq\<ENTER\>
-
+Check the service:
 
 ```bash
 kubectl get service myweb 
@@ -377,6 +376,15 @@ You will use Vi editor for this again.
 ```bash
 kubectl edit service myweb
 ```
+
+- Use the arrow keys to go to near the bottom of the file, find "Type: NodePort" and use the arrow keys to go to the first letter of NodePort
+- Press i to get into insert mode
+- Press the delete key several times to delete the word NodePort
+- type LoadBalancer
+- and save your changes and exit by typing \<ESC\>:wq\<ENTER\>
+
+The changes are automatically applied by the K8s API.
+
 
 Once complete we should be able to find our newly assigned external LoadBalancer IP address and test our myweb deployment.
 
