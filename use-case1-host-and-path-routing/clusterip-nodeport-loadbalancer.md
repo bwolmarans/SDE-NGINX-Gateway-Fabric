@@ -225,6 +225,7 @@ You are now going to use Vi to edit the service.
 ```bash
 kubectl edit service myweb
 ```
+>**Note**: The default command line editor is Vim.
 
 Use the arrow keys to go to near the bottom of the file, find "Type: ClusterIP" and use the arrow keys to go to the first letter of ClusterIP
 
@@ -234,9 +235,8 @@ Press the delete key several times to delete the word ClusterIP
 
 Type NodePort
 
-and save your changes and exit by typing <ESC>:wq<enter>
+and save your changes and exit by typing \<ESC\>:wq\<ENTER\>
 
->**Note**: The default command line editor is Vim.
 
 ```bash
 kubectl get service myweb 
