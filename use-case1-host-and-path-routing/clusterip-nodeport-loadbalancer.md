@@ -220,13 +220,21 @@ However, in this case the proxy server will need to come up with a method to det
 
 Generally this is a good option for developers but it is not commonly used for exposing services in production or to external customers.
 
-You are now going to use Vi to edit the service. Fine ClusterIP and change to NodePort.
+You are now going to use Vi to edit the service. 
 
 ```bash
 kubectl edit service myweb
 ```
 
-Change the type from **ClusterIP** to **NodePort**, save your changes and exit.  
+Use the arrow keys to go to near the bottom of the file, find "Type: ClusterIP" and use the arrow keys to go to the first letter of ClusterIP
+
+Press i to get into insert mode
+
+Press the delete key several times to delete the word ClusterIP
+
+Type NodePort
+
+and save your changes and exit by typing <ESC>:wq<enter>
 
 >**Note**: The default command line editor is Vim.
 
