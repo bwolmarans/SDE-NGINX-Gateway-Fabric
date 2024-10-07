@@ -20,8 +20,7 @@ The NGINX Gateway Fabric leverages the NGINX web server as a proxy for traffic i
 
 ### Environment
 
-The live environment you will be using will be based on the
-[SDE NGINX Gateway Fabric UDF Blueprint]([https://udf.f5.com/b/d2617e7e-018f-4c9a-a15f-09ca55ae8a37#documentation). Create and start a deployment
+The live environment you will be using will be based on [SDE NGINX Gateway Fabric UDF Blueprint](https://udf.f5.com/b/d2617e7e-018f-4c9a-a15f-09ca55ae8a37#documentation). Create and start a deployment
 if you have not already done so.
 
 **Note** Hostnames are already configured in /etc/hosts on the Bastion Host, no other DNS servers are needed.
