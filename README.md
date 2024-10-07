@@ -1,5 +1,8 @@
 # NGINX Gateway Fabric (NGF)
 
+### Credit
+This lab is based on work completed by Carlos Hernandez from the Consulting Team.  Details about the source lab and the setup can be found here Practical Consulting Lab
+
 Welcome to this NGINX Gateway Fabric (NGF) project where we explore and demonstrate different use
 cases. 
 
