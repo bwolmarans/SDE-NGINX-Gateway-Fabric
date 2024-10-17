@@ -8,7 +8,7 @@ In this demo we are going to deploy the tea application and service to the defau
 
 ## Interactive lab
 
-Copy and paste the following code snippet to deploy the coffee application and service.
+Copy and paste the following code snippet to deploy the tea application and service.
 
 > If you want to see the yaml file for this application, click [here](tea.yaml).
 
