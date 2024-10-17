@@ -126,7 +126,7 @@ You can start with a quick check for the pods and services and then move on from
 kubectl get all -owide
 ```
 
-Next test the basic functionality for /coffee and /tea
+Next test the basic functionality for /coffee and /socks
 
 ```bash
 curl http://coffee.lab.f5npi.net/coffee
