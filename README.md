@@ -1,7 +1,7 @@
 # NGINX Gateway Fabric (NGF)
 
 ### Credit
-This lab guide is an external disconnected fork of the original, and has updates to the original, including minor fixes. The original lab guide authored by the F5 NPI Team a.glanville@f5.com and t.thomas@f5.com and john.wong@f5.com The main copy of this lab guide is stored on the F5 private Gitlab behind the F5 VPN and is linked to from the UDF description. This lab guide stored in this GitHub repo is the beginnings of a resource for building training for customers, partners, and others where access to the F5 VPN may be difficult and where rapid updates can be made to this lab without using F5 Gitlab.
+This lab guide is an updated, external disconnected fork and has minor fixes. The original lab guide authored by the F5 NPI Team a.glanville@f5.com and t.thomas@f5.com and john.wong@f5.com The main copy of this lab guide is stored on the F5 private Gitlab behind the F5 VPN and is linked to from the UDF description. This lab guide stored in this GitHub repo is the beginnings of a resource for building training for customers, partners, and others where access to the F5 VPN may be difficult and where rapid updates can be made to this lab without using F5 Gitlab.
 Welcome to this NGINX Gateway Fabric (NGF) project where we explore and demonstrate different use
 cases. 
 
@@ -57,7 +57,8 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 
 ### Complete these Lab Modules/Use Cases, in order.
 * [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
-* [Kubernetes Services, Deployments, and Networking Refresher](use-case1-host-and-path-routing/clusterip-nodeport-loadbalancer.md) 
+* [Kubernetes Services, Deployments, and Networking Refresher](use-case1-host-and-path-routing/clusterip-nodeport-loadbalancer.md)
+* [Upgrade NGINX Gateway Fabric to latest stable version](upgrade_lab/README.md) 
 * [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
 * [Modify Request Headers](use-case3-mod-req-headers/README.md)
