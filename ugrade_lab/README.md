@@ -1,7 +1,6 @@
 # Upgrade NGINX Gateway Fabric
 
-https://docs.nginx.com/nginx-gateway-fabric/installation/ngf-images/jwt-token-docker-secret/
-Note: This is not a production lab training course, so we are not going to do a hitless rolling deployment, nor canary, nor blue green.  Just a straight upgrade.
+## Note: This is not a production environment, so we are not going to do a hitless rolling deployment, nor canary, nor blue green.
 
 1. check the version before upgrade: k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 2. copy your JWT to your /home/f5demo directory on the bastion host (maybe by copy and pasting (shift-insert, or ctrl-shift-v) it into a file )
