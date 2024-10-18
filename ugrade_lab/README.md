@@ -14,6 +14,10 @@
 - kubectl get pods -n nginx-gateway
 9. check the version after upgrade: k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 
+## Let's also enable the NGINX Plus Dashboard
+
+In a new webshell:
+
 - Port Forward to see Plus API: kubectl port-forward -n nginx-gateway nginx-gateway-7b97d65fc7-mc8jj --address 0.0.0.0 8765:8765 -n nginx-gateway &
 
 - Generate Traffic: for i in {1..1000}; do curl tea.lab.f5npi.net/tea ; done
