@@ -3,7 +3,7 @@
 https://docs.nginx.com/nginx-gateway-fabric/installation/ngf-images/jwt-token-docker-secret/
 Note: This is not a production lab training course, so we are not going to do a hitless rolling deployment, nor canary, nor blue green.  Just a straight upgrade.
 
-1. check the version before upgrade: k describe -n nginx-gateway gateways.gateway.networking.k8s.io 
+1. check the version before upgrade: k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 2. copy your JWT to your /home/f5demo directory on the bastion host (maybe by copy and pasting (shift-insert, or ctrl-shift-v) it into a file )
 3. docker is installed, so do a docker login: docker login private-registry.nginx.com --username=`cat myF5.jwt` --password=none
 5. create a secret: kubectl create secret docker-registry nginx-plus-registry-secret --docker-server=private-registry.nginx.com --docker-username=`cat myF5.jwt` --docker-password=none -n nginx-gateway
@@ -13,7 +13,7 @@ Note: This is not a production lab training course, so we are not going to do a 
 - kubectl apply -f https://raw.githubusercontent.com/nginxinc/nginx-gateway-fabric/v1.4.0/deploy/crds.yaml
 - kubectl apply -f https://raw.githubusercontent.com/nginxinc/nginx-gateway-fabric/v1.4.0/deploy/nginx-plus/deploy.yaml
 - kubectl get pods -n nginx-gateway
-9. check the version after upgrade: k describe -n nginx-gateway gateways.gateway.networking.k8s.io 
+9. check the version after upgrade: k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 
 - Port Forward to see Plus API: kubectl port-forward -n nginx-gateway nginx-gateway-7b97d65fc7-mc8jj --address 0.0.0.0 8765:8765 -n nginx-gateway &
 
