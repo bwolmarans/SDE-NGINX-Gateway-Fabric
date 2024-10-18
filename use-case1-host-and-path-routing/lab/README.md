@@ -308,7 +308,16 @@ Now test your newly exposed application using the **NGINX Gateway Fabric HTTPRou
 ```bash
 curl tea.lab.f5npi.net/tea
 ```
+## Let's also enable the NGINX Plus Dashboard
 
+In a new webshell:
+
+- Port Forward to see Plus API: kubectl port-forward -n nginx-gateway nginx-gateway-7b97d65fc7-mc8jj --address 0.0.0.0 8765:8765 -n nginx-gateway &
+
+- Generate Traffic: for i in {1..1000}; do curl tea.lab.f5npi.net/tea ; done
+
+- Now connect in UDF using Bastion Host NGINX Plus API GUI access method in a new browser tab
+  
 <details>
   <summary><b>Example output</b></summary>
 
