@@ -58,7 +58,8 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 ### Complete these Lab Modules/Use Cases, in order.
 * [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
 * [Kubernetes Services, Deployments, and Networking Refresher](use-case1-host-and-path-routing/clusterip-nodeport-loadbalancer.md)
-* [Upgrade NGINX Gateway Fabric to latest stable version](upgrade_lab/README.md) 
+* [Upgrade NGINX Gateway Fabric to latest stable version](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/blob/main/ugrade_lab/README.md)
+* ) 
 * [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 * [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
 * [Modify Request Headers](use-case3-mod-req-headers/README.md)
