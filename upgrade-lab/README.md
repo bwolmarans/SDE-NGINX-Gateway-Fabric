@@ -13,12 +13,14 @@ Note: This is not a production environment, so we are not going to do a hitless 
 ```bash
 k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 ```
+```bash
 Name:         nginx
 Namespace:
 Labels:       app.kubernetes.io/instance=nginx-gateway
               app.kubernetes.io/name=nginx-gateway
               app.kubernetes.io/version=1.3.0
-              
+```
+
 2. copy your JWT to your /home/f5demo directory on the bastion host (maybe by copy and pasting (shift-insert, or ctrl-shift-v) it into a file )
 3. docker is installed, so do a docker login: 
 
@@ -47,11 +49,10 @@ kubectl get pods -n nginx-gateway
 ```bash
 k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx
 ```
+```bash
 Name:         nginx
 Namespace:
 Labels:       app.kubernetes.io/instance=nginx-gateway
               app.kubernetes.io/name=nginx-gateway
-              app.kubernetes.io/version=1.3.0
-
-
-
+              app.kubernetes.io/version=1.4.0
+```
