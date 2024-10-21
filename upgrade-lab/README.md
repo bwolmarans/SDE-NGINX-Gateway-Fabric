@@ -2,6 +2,9 @@
 
 ## Note: This is not a production environment, so we are not going to do a hitless rolling deployment, nor canary, nor blue green.
 
+### [Release Notes for NGF](https://github.com/nginxinc/nginx-gateway-fabric/blob/main/CHANGELOG.md)
+
+
 1. check the version before upgrade: k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 2. copy your JWT to your /home/f5demo directory on the bastion host (maybe by copy and pasting (shift-insert, or ctrl-shift-v) it into a file )
 3. docker is installed, so do a docker login: docker login private-registry.nginx.com --username=\`cat myF5.jwt\` --password=none
