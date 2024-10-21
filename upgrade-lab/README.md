@@ -13,6 +13,12 @@ Note: This is not a production environment, so we are not going to do a hitless 
 ```bash
 k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 ```
+Name:         nginx
+Namespace:
+Labels:       app.kubernetes.io/instance=nginx-gateway
+              app.kubernetes.io/name=nginx-gateway
+              app.kubernetes.io/version=1.3.0
+              
 2. copy your JWT to your /home/f5demo directory on the bastion host (maybe by copy and pasting (shift-insert, or ctrl-shift-v) it into a file )
 3. docker is installed, so do a docker login: 
 
@@ -34,14 +40,18 @@ kubectl get secret nginx-plus-registry-secret --output=yaml
 kubectl kustomize "https://github.com/nginxinc/nginx-gateway-fabric/config/crd/gateway-api/standard?ref=v1.4.0" | kubectl apply -f -
 kubectl apply -f https://raw.githubusercontent.com/nginxinc/nginx-gateway-fabric/v1.4.0/deploy/crds.yaml
 kubectl apply -f https://raw.githubusercontent.com/nginxinc/nginx-gateway-fabric/v1.4.0/deploy/nginx-plus/deploy.yaml
- kubectl get pods -n nginx-gateway
+kubectl get pods -n nginx-gateway
 ```
 
 7. check the version after upgrade:
 ```bash
 k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx
 ```
-
+Name:         nginx
+Namespace:
+Labels:       app.kubernetes.io/instance=nginx-gateway
+              app.kubernetes.io/name=nginx-gateway
+              app.kubernetes.io/version=1.3.0
 
 
 
