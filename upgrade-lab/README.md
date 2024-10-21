@@ -27,12 +27,12 @@ Labels:       app.kubernetes.io/instance=nginx-gateway
 4. docker is installed, so do a docker login: 
 
 ```bash
-docker login private-registry.nginx.com --username=\`cat myF5.jwt\` --password=none
+docker login private-registry.nginx.com --username=`cat myF5.jwt` --password=none
 ```
 
 5. create a secret:
 ```bash
-kubectl create secret docker-registry nginx-plus-registry-secret --docker-server=private-registry.nginx.com --docker-username=\`cat myF5.jwt\` --docker-password=none -n nginx-gateway
+kubectl create secret docker-registry nginx-plus-registry-secret --docker-server=private-registry.nginx.com --docker-username=`cat myF5.jwt` --docker-password=none -n nginx-gateway
 ```
 6. confirm the secret exists:
    
