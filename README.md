@@ -1,11 +1,15 @@
 # NGINX Gateway Fabric (NGF)
 
 ### Credit
-This lab guide is an updated, external disconnected fork and has minor fixes. The original lab guide authored by the F5 NPI Team a.glanville@f5.com and t.thomas@f5.com and john.wong@f5.com The main copy of this lab guide is stored on the F5 private Gitlab behind the F5 VPN and is linked to from the UDF description. This lab guide stored in this GitHub repo is the beginnings of a resource for building training for customers, partners, and others where access to the F5 VPN may be difficult and where rapid updates can be made to this lab without using F5 Gitlab.
+This lab guide is an updated, external disconnected fork and has minor fixes. The original lab guide authored by the F5 NPI Team a.glanville@f5.com and t.thomas@f5.com and john.wong@f5.com The main copy of this lab guide is stored on the F5 private Gitlab behind the F5 VPN and is linked to from the UDF description. 
+
+
+This lab guide stored in this GitHub repo is the beginnings of a resource for building training for customers, partners, and others where access to the F5 VPN may be difficult and where rapid updates can be made to this lab without using F5 Gitlab.
 Welcome to this NGINX Gateway Fabric (NGF) project where we explore and demonstrate different use
 cases. 
 
-### Note: NGINX Gateway Fabric is already installed; this is not an installation lab.
+### Note: NGINX Gateway Fabric is already installed; You will do an upgrade, but this is not an installation lab.
+
 
 [Installation instructions are here, but you will not need them for this lab](https://docs.nginx.com/nginx-gateway-fabric/installation/installing-ngf)
 
