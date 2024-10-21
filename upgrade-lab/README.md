@@ -2,7 +2,7 @@
 
 Note: This is not a production environment, so we are not going to do a hitless rolling deployment, nor canary, nor blue green.
 
-[Kubernetes Rolling Update](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment)
+[Kubernetes Rolling Update Information](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-update-deployment)
 
 
 
