@@ -13,6 +13,7 @@ Note: This is not a production environment, so we are not going to do a hitless 
 ```bash
 k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx 
 ```
+OUTPUT:
 ```bash
 Name:         nginx
 Namespace:
@@ -50,6 +51,7 @@ kubectl get pods -n nginx-gateway
 ```bash
 k -n nginx-gateway describe gatewayclasses.gateway.networking.k8s.io nginx
 ```
+OUTPUT:
 ```bash
 Name:         nginx
 Namespace:
