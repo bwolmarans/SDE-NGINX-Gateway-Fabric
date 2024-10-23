@@ -101,6 +101,11 @@ We will create an [NGINX Gateway Fabric gateway](gateway.yaml) object that will 
 
 This could be the responsibility of the **Cluster Administrator**.
 
+First delete the gateway Brett forgot to clean up last night.
+```bash
+k delete gateways.gateway.networking.k8s.io cafe-gateway
+```
+
 Copy and paste the following code snippet to deploy the coffee gateway.
 
 > If you prefer to manually create and deploy this gateway, click [here](gateway.yaml) for the
