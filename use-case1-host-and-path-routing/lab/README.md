@@ -310,7 +310,7 @@ curl tea.lab.f5npi.net/tea
 ```
 ## Let's also enable the NGINX Plus Dashboard
 
-![NGINX API GUI](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/tree/main/use-case1-host-and-path-routing/lab/nginxplus-api.jpg)
+![NGINX API GUI](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/blob/main/use-case1-host-and-path-routing/lab/nginxplus-api.jpg)
 
 In a new webshell:
 
