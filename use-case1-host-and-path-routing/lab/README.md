@@ -310,6 +310,8 @@ curl tea.lab.f5npi.net/tea
 ```
 ## Let's also enable the NGINX Plus Dashboard
 
+![NGINX API GUI](https://github.com/bwolmarans/SDE-NGINX-Gateway-Fabric/tree/main/use-case1-host-and-path-routing/lab/nginxplus-api.jpg)
+
 In a new webshell:
 
 - Port Forward to see Plus API: kubectl port-forward -n nginx-gateway nginx-gateway-7b97d65fc7-mc8jj --address 0.0.0.0 8765:8765 -n nginx-gateway &
