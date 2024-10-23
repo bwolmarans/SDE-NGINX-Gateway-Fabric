@@ -64,8 +64,8 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 * Fix It: You are given a broken configuration and you are expected to fix the issue.
 
 ### Complete these Lab Modules/Use Cases, in order.
-1. [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
-2. [Kubernetes Services, Deployments, and Networking Refresher](use-case1-host-and-path-routing/clusterip-nodeport-loadbalancer.md)
+1. (Optional) [Kubernetes Environment Exploration and Validation](../main/validation-and-troubleshooting/README.md)
+2. (Optional) [Kubernetes Services, Deployments, and Networking Refresher](use-case1-host-and-path-routing/clusterip-nodeport-loadbalancer.md)
 3. [Upgrade NGINX Gateway Fabric to latest stable version](upgrade-lab/README.md)
 4. [Basic Host and Path-based Routing](use-case1-host-and-path-routing/README.md)
 5. [Cross Namespace Routing](use-case2-cross-namespace-routing/README.md)
