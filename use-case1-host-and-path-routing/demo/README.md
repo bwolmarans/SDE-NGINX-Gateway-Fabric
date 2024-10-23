@@ -221,6 +221,11 @@ kubectl describe gateways cafe-gateway
 
 Next we will create the **HTTPRoute** that will allow traffic inbound to our coffee application and leverage the NGINX Gateway Fabric gateway object.  This object will also define the path uri of **/coffee** and backend service (POD) to route traffic to.  This could be the responsibility of the **Application Developer**.
 
+First delete existing httproute
+```bash
+k delete httproutes.gateway.networking.k8s.io coffee-and-socks
+```
+
 Copy and paste the following code snippet to deploy the coffee gateway.
 
 > If you prefer to manually create and deploy this HTTPRoute, click [here](httpRoute-coffee.yaml)
