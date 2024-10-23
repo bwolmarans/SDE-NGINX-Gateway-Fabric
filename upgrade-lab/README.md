@@ -37,7 +37,7 @@ kubectl create secret docker-registry nginx-plus-registry-secret --docker-server
 6. confirm the secret exists:
    
 ```bash
-kubectl get secret nginx-plus-registry-secret --output=yaml
+kubectl get secret nginx-plus-registry-secret -n nginx-gateway --output=yaml
 ```
 7. deploy the latest NGF
 ```bash
