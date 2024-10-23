@@ -72,7 +72,7 @@ Each Use Case will consist of a Demo, Lab, and Fix it.
 6. [Modify Request Headers](use-case3-mod-req-headers/README.md)
 7. [HTTPS Termination](use-case4-https-termination/README.md)
 8. [Advanced Routing and Split Traffic Connections](use-case5-and-6-advanced-routing-traffic-splitting/README.md)
-9. [Observability](tbd needs 1.4.0)
+9. [Observability](tbd)
   
 ## ---------------- end of main lab section ----------------------
 
